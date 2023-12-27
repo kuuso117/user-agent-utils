@@ -69,6 +69,18 @@ public enum OperatingSystem {
 	
 	// for Google user-agent, see https://developer.chrome.com/multidevice/user-agent
 	ANDROID(		Manufacturer.GOOGLE,null, 0, "Android", new String[] { "Android" },  new String[] {"Ubuntu"}, DeviceType.MOBILE, null ),
+		ANDROID14(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 2141, "Android 14.x", new String[] { "Android 14", "Android-14" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+        ANDROID14_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID14, 2140, "Android 14.x Tablet", new String[] { "Android 14", "Android-14"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
+		ANDROID13(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 2131, "Android 13.x", new String[] { "Android 13", "Android-13" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+        ANDROID13_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID13, 2130, "Android 13.x Tablet", new String[] { "Android 13", "Android-13"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
+		ANDROID12(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 2121, "Android 12.x", new String[] { "Android 12", "Android-12" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+        ANDROID12_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID12, 2120, "Android 12.x Tablet", new String[] { "Android 12", "Android-12"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
+		ANDROID11(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 2111, "Android 11.x", new String[] { "Android 11", "Android-11" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+        ANDROID11_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID11, 2110, "Android 11.x Tablet", new String[] { "Android 11", "Android-11"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
+		ANDROID10(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 2101, "Android 10.x", new String[] { "Android 10", "Android-10" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+        ANDROID10_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID10, 2100, "Android 10.x Tablet", new String[] { "Android 10", "Android-10"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
+		ANDROID9(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 9, "Android 9.x", new String[] { "Android 9", "Android-9" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
+        ANDROID9_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID9, 90, "Android 9.x Tablet", new String[] { "Android 9", "Android-9"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
 		ANDROID8(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 8, "Android 8.x", new String[] { "Android 8", "Android-8" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
         ANDROID8_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID8, 80, "Android 8.x Tablet", new String[] { "Android 8", "Android-8"}, new String[] { "mobile", "glass"}, DeviceType.TABLET, null ),
 		ANDROID7(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 7, "Android 7.x", new String[] { "Android 7", "Android-7" },   new String[] { "glass" }, DeviceType.MOBILE, null ),
@@ -83,7 +95,7 @@ public enum OperatingSystem {
 		ANDROID3_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID, 30, "Android 3.x Tablet", new String[] { "Android 3" },  null, DeviceType.TABLET, null ), // as long as there are not Android 3.x phones this should be enough
 		ANDROID2(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 2, "Android 2.x", new String[] { "Android 2" },  null, DeviceType.MOBILE, null ),
 		ANDROID2_TABLET(Manufacturer.GOOGLE,OperatingSystem.ANDROID2, 20, "Android 2.x Tablet", new String[] { "Kindle Fire", "GT-P1000","SCH-I800" },  null, DeviceType.TABLET, null ),
-		ANDROID1(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 1, "Android 1.x", new String[] { "Android 1" },  null, DeviceType.MOBILE, null ),
+		ANDROID1(		Manufacturer.GOOGLE,OperatingSystem.ANDROID, 1, "Android 1.x", new String[] { "Android 1.", "Android 1;" },  null, DeviceType.MOBILE, null ),
 		/**
 		 * Generic Android mobile device without OS version number information
 		 */
@@ -108,6 +120,12 @@ public enum OperatingSystem {
 	 * iOS4, with the release of the iPhone 4, Apple renamed the OS to iOS.
 	 */	
 	IOS(			Manufacturer.APPLE,null, 2, "iOS", new String[] { "iPhone", "like Mac OS X" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+		iOS17_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 98, "iOS 17 (iPhone)", new String[] { "iPhone OS 17" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+		iOS16_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 97, "iOS 16 (iPhone)", new String[] { "iPhone OS 16" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+		iOS15_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 96, "iOS 15 (iPhone)", new String[] { "iPhone OS 15" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+		iOS14_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 95, "iOS 14 (iPhone)", new String[] { "iPhone OS 14" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+		iOS13_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 94, "iOS 13 (iPhone)", new String[] { "iPhone OS 13" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
+		iOS12_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 93, "iOS 12 (iPhone)", new String[] { "iPhone OS 12" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS11_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 92, "iOS 11 (iPhone)", new String[] { "iPhone OS 11" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS10_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 91, "iOS 10 (iPhone)", new String[] { "iPhone OS 10" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions
 		iOS9_IPHONE(	Manufacturer.APPLE,OperatingSystem.IOS, 90, "iOS 9 (iPhone)", new String[] { "iPhone OS 9" },  null, DeviceType.MOBILE, null ), // before MAC_OS_X_IPHONE for all older versions

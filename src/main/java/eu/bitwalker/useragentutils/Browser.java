@@ -52,6 +52,28 @@ import eu.bitwalker.useragentutils.browser.SafariUtils;
 public enum Browser {
 
 	/**
+	 * wechat
+	 */
+	WECHAT(Manufacturer.TENCENT, null, 1, "Wechat", new String[] {"MicroMessenger"}, new String[] {"wxwork"}, BrowserType.MOBILE_BROWSER, RenderingEngine.BLINK, new PatternBasedVersionFetcher("MicroMessenger\\/(([0-9]+\\.[0-9]+)\\.?([0-9]+)?\\.?([0-9]+)?)\\(\\w+\\)")),
+		WECHAT_PC(Manufacturer.TENCENT, WECHAT, 10, "Wechat PC",  new String[] {"MicroMessenger"}, new String[] {"wxwork", "Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.BLINK, null),
+		WECHAT_MINI_PROGRAM(Manufacturer.TENCENT, WECHAT, 2, "Wechat MiniProgram", new String[] {"miniProgram"}, new String[] {"wxwork"}, BrowserType.MOBILE_BROWSER, RenderingEngine.BLINK, null),
+		WECHAT_MINI_PROGRAM_PC(Manufacturer.TENCENT, WECHAT_MINI_PROGRAM, 20, "Wechat MiniProgram PC", new String[] {"miniProgram"}, new String[] {"wxwork", "Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.BLINK, null),
+
+	/**
+	 * wechat enterprise
+	 */
+	WECHAT_ENTERPRISE(Manufacturer.TENCENT, null, 4, "Wechat Enterprise", new String[] {"wxwork"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.BLINK, new PatternBasedVersionFetcher("wxwork\\/(([0-9]+\\.[0-9]+)\\.?([0-9]+)?)")),
+		WECHAT_ENTERPRISE_PC(Manufacturer.TENCENT, WECHAT_ENTERPRISE, 40, "Wechat Enterprise PC", new String[] {"wxwork"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.BLINK, null),
+
+	/**
+	 * Ali
+	 */
+	ALI(Manufacturer.ALIBABA, null, 0, "Ali", new String[] {"alibaba"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.BLINK, null),
+		DING_TALK(Manufacturer.ALIBABA, ALI, 1, "DingTalk", new String[] {"DingTalk"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.BLINK, new PatternBasedVersionFetcher("\\(?DingTalk\\/(([0-9]+\\.[0-9]+)\\.?([0-9]+)?)\\)?")),
+		//xxx dingTalk pc maybe use default pc browser instead of built-in browser
+		DING_TALK_PC(Manufacturer.ALIBABA, DING_TALK, 10, "DingTalk PC", new String[] {"DingTalk"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.BLINK, null),
+
+	/**
 	 * Outlook email client
 	 */
 	OUTLOOK(	Manufacturer.MICROSOFT, null, 100, "Outlook", new String[] {"MSOffice"}, null, BrowserType.EMAIL_CLIENT, RenderingEngine.WORD, new PatternBasedVersionFetcher("MSOffice (([0-9]+))")), // before IE7
