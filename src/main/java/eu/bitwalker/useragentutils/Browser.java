@@ -134,7 +134,11 @@ public enum Browser {
 		EDGE14(			Manufacturer.MICROSOFT, Browser.EDGE, 305, "Microsoft Edge (layout engine 14)", new String[] {"Edge/14"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
 		EDGE13(			Manufacturer.MICROSOFT, Browser.EDGE, 303, "Microsoft Edge (layout engine 13)", new String[] {"Edge/13"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
 		EDGE12(			Manufacturer.MICROSOFT, Browser.EDGE, 301, "Microsoft Edge (layout engine 12)", new String[] {"Edge/12"}, new String[] {"Mobile"}, BrowserType.WEB_BROWSER, RenderingEngine.EDGE_HTML, null ),
-	
+
+	EDGE_CHROMIUM(Manufacturer.MICROSOFT, null, 320, "Microsoft Edge", new String[] {"Edg"}, null, BrowserType.WEB_BROWSER, RenderingEngine.BLINK, new PatternBasedVersionFetcher("Edg\\w*\\/(([0-9]+)\\.?([0-9.]*))")),
+		EDGE_CHROMIUM_ANDROID(Manufacturer.MICROSOFT, EDGE_CHROMIUM, 323, "Microsoft Edge Mobile", new String[] {"EdgA"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.BLINK, null),
+		EDGE_CHROMIUM_IOS(Manufacturer.MICROSOFT, EDGE_CHROMIUM, 322, "Microsoft Edge Mobile", new String[] {"EdgiOS"}, null, BrowserType.MOBILE_BROWSER, RenderingEngine.BLINK, null),
+
 	/**
 	 * Google Chrome browser
 	 */
